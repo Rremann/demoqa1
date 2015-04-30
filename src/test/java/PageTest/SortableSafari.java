@@ -29,7 +29,7 @@ public class SortableSafari {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setPlatform(Platform.MAC);
 		cap.setBrowserName(BrowserType.SAFARI);
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"), cap);
 		//172.16.7.38
 		sortMethods = new SortableMethods(new Sortable(driver));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
