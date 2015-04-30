@@ -18,7 +18,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import PageMethods.SortableMethods;
 import PageObjects.Sortable;
 
-public class SortableFireFox {
+public class SortableFireFoxTest {
 
 	private SortableMethods sortMethods;
 	private WebDriver driver;

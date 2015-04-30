@@ -18,23 +18,23 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import PageMethods.HomeMethods;
 import PageObjects.Home;
 
-public class HomeTestFireFox {
+public class HomeTestExplorerTest {
 
 	private HomeMethods homeMethods;
 	private WebDriver driver;
 
 	@Before
 	public void setData() throws MalformedURLException{
-		
+
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setPlatform(Platform.WINDOWS);
-		cap.setBrowserName(BrowserType.FIREFOX);
-		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),cap);
+		cap.setBrowserName(BrowserType.IE);
+		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),	cap);
 		homeMethods = new HomeMethods(new Home(driver));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://demoqa.com");
-		
+
 	}
 
 	@After
@@ -58,10 +58,10 @@ public class HomeTestFireFox {
 	}
 
 	@Test
-	public void clickTabOne(){
+	public void clickTabOne() {
 		assertTrue(homeMethods.canClickTabOne());
 	}
-	
+
 	@Test
 	public void clickTabTwo() {
 		assertTrue(homeMethods.canClickTabTwo());
@@ -86,10 +86,9 @@ public class HomeTestFireFox {
 	public void checkBreadCrumbs() {
 		assertTrue(homeMethods.isBreadCrumbCorrect());
 	}
-	
-	
+
 	@Test
-	public void clickAboutUs(){
+	public void clickAboutUs() {
 		assertTrue(homeMethods.canClickAboutUs());
 	}
 
@@ -208,6 +207,4 @@ public class HomeTestFireFox {
 		assertTrue(homeMethods.canClickAccordion());
 	}
 
-	
-	
 }

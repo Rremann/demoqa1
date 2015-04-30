@@ -18,7 +18,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import PageMethods.HomeMethods;
 import PageObjects.Home;
 
-public class HomeSafari {
+public class HomeSafariTest {
 
 
 	private HomeMethods homeMethods;

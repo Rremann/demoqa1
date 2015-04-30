@@ -14,10 +14,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 import PageMethods.SortableMethods;
 import PageObjects.Sortable;
 
-public class SortableChrome {
+public class SortableSafariTest {
 
 	WebDriver driver; 
 	SortableMethods sortMethods;
@@ -27,15 +28,15 @@ public class SortableChrome {
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setPlatform(Platform.MAC);
-		cap.setBrowserName(BrowserType.CHROME);
+		cap.setBrowserName(BrowserType.SAFARI);
 		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"), cap);
+		//172.16.7.38
 		sortMethods = new SortableMethods(new Sortable(driver));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://demoqa.com/sortable/#");
 		
 	}
-	
 	
 	
 	@After
@@ -45,22 +46,22 @@ public class SortableChrome {
 	
 	@Test
 	public void sortDefault(){
-		assertTrue(sortMethods.canSortDefaultGC());
+		assertTrue(sortMethods.canSortDefaultSF());
 	}
 	
 	@Test
 	public void sortConnect(){
-		assertTrue(sortMethods.canSortConnectListGC());
+		assertTrue(sortMethods.canSortConnectListSF());
 	}
 	
 	@Test
 	public void sortDisplay(){
-		assertTrue(sortMethods.canSortDisplayAsGridGC());
+		assertTrue(sortMethods.canSortDisplayAsGridSF());
 	}
 	
 	@Test
 	public void sortPortlets(){
-		assertTrue(sortMethods.canSortPortletsGC());		
+		assertTrue(sortMethods.canSortPortletsSF());		
 	}
 	
 	@Test
@@ -188,6 +189,5 @@ public class SortableChrome {
 		assertTrue(sortMethods.canClickAccordion());
 	}
 
-	
 	
 }

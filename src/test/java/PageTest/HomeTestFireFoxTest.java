@@ -18,18 +18,18 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import PageMethods.HomeMethods;
 import PageObjects.Home;
 
-public class HomeTestChrome {
+public class HomeTestFireFoxTest {
 
 	private HomeMethods homeMethods;
 	private WebDriver driver;
 
 	@Before
-	public void setData()throws MalformedURLException {
-
+	public void setData() throws MalformedURLException{
+		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setPlatform(Platform.MAC);
-		cap.setBrowserName(BrowserType.CHROME);
-		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"), cap);
+		cap.setPlatform(Platform.WINDOWS);
+		cap.setBrowserName(BrowserType.FIREFOX);
+		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),cap);
 		homeMethods = new HomeMethods(new Home(driver));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -86,6 +86,7 @@ public class HomeTestChrome {
 	public void checkBreadCrumbs() {
 		assertTrue(homeMethods.isBreadCrumbCorrect());
 	}
+	
 	
 	@Test
 	public void clickAboutUs(){
@@ -207,5 +208,6 @@ public class HomeTestChrome {
 		assertTrue(homeMethods.canClickAccordion());
 	}
 
+	
 	
 }

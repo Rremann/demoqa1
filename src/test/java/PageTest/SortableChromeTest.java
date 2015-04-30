@@ -14,13 +14,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import PageMethods.SortableMethods;
 import PageObjects.Sortable;
 
-public class SortableExplorer {
+public class SortableChromeTest {
 
-	
 	WebDriver driver; 
 	SortableMethods sortMethods;
 	
@@ -28,15 +26,16 @@ public class SortableExplorer {
 	public void setData()throws MalformedURLException{
 
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setPlatform(Platform.WINDOWS);
-		cap.setBrowserName(BrowserType.IE);
-		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),cap);
+		cap.setPlatform(Platform.MAC);
+		cap.setBrowserName(BrowserType.CHROME);
+		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"), cap);
 		sortMethods = new SortableMethods(new Sortable(driver));
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://demoqa.com/sortable/#");
-
+		
 	}
+	
 	
 	
 	@After
@@ -68,7 +67,7 @@ public class SortableExplorer {
 	public void checkBreadCrumb(){
 		assertTrue(sortMethods.checkBreadCrumb());
 	}
-	
+
 	@Test
 	public void clickAboutUs(){
 		assertTrue(sortMethods.canClickAboutUs());
@@ -188,5 +187,7 @@ public class SortableExplorer {
 	public void clickAccordion() {
 		assertTrue(sortMethods.canClickAccordion());
 	}
+
+	
 	
 }

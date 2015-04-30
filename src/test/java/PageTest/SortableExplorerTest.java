@@ -18,8 +18,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import PageMethods.SortableMethods;
 import PageObjects.Sortable;
 
-public class SortableSafari {
+public class SortableExplorerTest {
 
+	
 	WebDriver driver; 
 	SortableMethods sortMethods;
 	
@@ -27,15 +28,14 @@ public class SortableSafari {
 	public void setData()throws MalformedURLException{
 
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setPlatform(Platform.MAC);
-		cap.setBrowserName(BrowserType.SAFARI);
-		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"), cap);
-		//172.16.7.38
+		cap.setPlatform(Platform.WINDOWS);
+		cap.setBrowserName(BrowserType.IE);
+		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),cap);
 		sortMethods = new SortableMethods(new Sortable(driver));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://demoqa.com/sortable/#");
-		
+
 	}
 	
 	
@@ -46,29 +46,29 @@ public class SortableSafari {
 	
 	@Test
 	public void sortDefault(){
-		assertTrue(sortMethods.canSortDefaultSF());
+		assertTrue(sortMethods.canSortDefaultGC());
 	}
 	
 	@Test
 	public void sortConnect(){
-		assertTrue(sortMethods.canSortConnectListSF());
+		assertTrue(sortMethods.canSortConnectListGC());
 	}
 	
 	@Test
 	public void sortDisplay(){
-		assertTrue(sortMethods.canSortDisplayAsGridSF());
+		assertTrue(sortMethods.canSortDisplayAsGridGC());
 	}
 	
 	@Test
 	public void sortPortlets(){
-		assertTrue(sortMethods.canSortPortletsSF());		
+		assertTrue(sortMethods.canSortPortletsGC());		
 	}
 	
 	@Test
 	public void checkBreadCrumb(){
 		assertTrue(sortMethods.checkBreadCrumb());
 	}
-
+	
 	@Test
 	public void clickAboutUs(){
 		assertTrue(sortMethods.canClickAboutUs());
@@ -188,6 +188,5 @@ public class SortableSafari {
 	public void clickAccordion() {
 		assertTrue(sortMethods.canClickAccordion());
 	}
-
 	
 }
