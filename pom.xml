@@ -38,6 +38,9 @@
 						<version>2.18.1</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+				<skipTests>false</skipTests>
+				</configuration>
 			</plugin>
 
 			<plugin>
