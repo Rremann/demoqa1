@@ -288,6 +288,8 @@ public class SortableMethods {
 		WebElement itemSeven = sort.getDefaultFunc().getSeventhBox();
 		
 		
+		sort.safDrag(itemOne, itemFive);
+		
 		
 		return sort.getDefaultFunc().getOrder().equals("Item 6 Item 2 Item 5 Item 3 Item 4 Item 1 Item 7");
 		
@@ -396,30 +398,7 @@ public class SortableMethods {
 		return sort.getPortlets().getOrder().equals("Links Shopping Feeds News Images ");
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	/**
 	 * Checks to see if the Bread Crumbs are correct when on the sortable page. 
@@ -450,7 +429,6 @@ public class SortableMethods {
 	public boolean canClickBlog(){
 		sort.clickBlog();
 		return sort.getUrl().equals("http://demoqa.com/blog/");
-
 	}
 	
 	public boolean canClickContact(){
