@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -44,147 +45,147 @@ public class SortableSafariTest {
 		driver.quit();
 	}
 	
-	@Test
+	@Ignore
 	public void sortDefault(){
 		assertTrue(sortMethods.canSortDefaultSF());
 	}
 	
-	@Test
+	@Ignore
 	public void sortConnect(){
 		assertTrue(sortMethods.canSortConnectListSF());
 	}
 	
-	@Test
+	@Ignore
 	public void sortDisplay(){
 		assertTrue(sortMethods.canSortDisplayAsGridSF());
 	}
 	
-	@Test
+	@Ignore
 	public void sortPortlets(){
 		assertTrue(sortMethods.canSortPortletsSF());		
 	}
 	
-	@Test
+	@Ignore
 	public void checkBreadCrumb(){
 		assertTrue(sortMethods.checkBreadCrumb());
 	}
 
-	@Test
+	@Ignore
 	public void clickAboutUs(){
 		assertTrue(sortMethods.canClickAboutUs());
 	}
 
-	@Test
+	@Ignore
 	public void hoverTwitter() {
 		assertTrue(sortMethods.checkTwitToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void hoverFacebook() {
 		assertTrue(sortMethods.checkFbToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void hoverGooglePlus() {
 		assertTrue(sortMethods.checkGplusToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void clickToolTip() {
 		assertTrue(sortMethods.canClickTooltip());
 	}
 
-	@Test
+	@Ignore
 	public void clickToolsQa() {
 		assertTrue(sortMethods.canClickToolsQaLink());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabs() {
 		assertTrue(sortMethods.canClickTabs());
 	}
 
-	@Test
+	@Ignore
 	public void clickSlider() {
 		assertTrue(sortMethods.canClickSlider());
 	}
 
-	@Test
+	@Ignore
 	public void clickServices() {
 		assertTrue(sortMethods.canClickServices());
 	}
 
-	@Test
+	@Ignore
 	public void clickSelectable() {
 		assertTrue(sortMethods.canClickSelectable());
 	}
 
-	@Test
+	@Ignore
 	public void clickResizeable() {
 		assertTrue(sortMethods.canClickResizeable());
 	}
 
-	@Test
+	@Ignore
 	public void clickResgistration() {
 		assertTrue(sortMethods.canClickRegistration());
 	}
 
-	@Test
+	@Ignore
 	public void clickPoweredLink() {
 		assertTrue(sortMethods.canClickPoweredLink());
 	}
 
-	@Test
+	@Ignore
 	public void clickMenu() {
 		assertTrue(sortMethods.canClickMenu());
 	}
 
-	@Test
+	@Ignore
 	public void clickHomeIcon() {
 		assertTrue(sortMethods.canClickHomeIcon());
 	}
 
-	@Test
+	@Ignore
 	public void clickFrames() {
 		assertTrue(sortMethods.canClickFramesAndWindows());
 	}
 
-	@Test
+	@Ignore
 	public void clickDroppable() {
 		assertTrue(sortMethods.canClickDroppable());
 	}
 
-	@Test
+	@Ignore
 	public void clickDraggable() {
 		assertTrue(sortMethods.canClickDraggable());
 	}
 
-	@Test
+	@Ignore
 	public void clickDemo() {
 		assertTrue(sortMethods.isDemoDropDownShown());
 	}
 
-	@Test
+	@Ignore
 	public void clickDatePicker() {
 		assertTrue(sortMethods.canClickDatePicker());
 	}
 
-	@Test
+	@Ignore
 	public void clickContact() {
 		assertTrue(sortMethods.canClickContact());
 	}
 
-	@Test
+	@Ignore
 	public void clickBlog() {
 		assertTrue(sortMethods.canClickBlog());
 	}
 
-	@Test
+	@Ignore
 	public void clickAutoComplete() {
 		assertTrue(sortMethods.canClickAutoComplete());
 	}
 
-	@Test
+	@Ignore
 	public void clickAccordion() {
 		assertTrue(sortMethods.canClickAccordion());
 	}

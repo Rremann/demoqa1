@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -43,167 +44,167 @@ public class HomeSafariTest {
 		driver.quit();
 	}
 
-	@Test
+	@Ignore
 	public void clickUniquePic() {
 		assertTrue(homeMethods.canclickUniquePic());
 	}
 
-	@Test
+	@Ignore
 	public void clickCustomerPic() {
 		assertTrue(homeMethods.canClickCustomerPic());
 	}
 
-	@Test
+	@Ignore
 	public void clickVeryFlexPic() {
 		assertTrue(homeMethods.canClickFlexablePic());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabOne(){
 		assertTrue(homeMethods.canClickTabOne());
 	}
 	
-	@Test
+	@Ignore
 	public void clickTabTwo() {
 		assertTrue(homeMethods.canClickTabTwo());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabThree() {
 		assertTrue(homeMethods.canClickTabThree());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabFour() {
 		assertTrue(homeMethods.canClickTabFour());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabFive() {
 		assertTrue(homeMethods.canClickTabFive());
 	}
 
-	@Test
+	@Ignore
 	public void checkBreadCrumbs() {
 		assertTrue(homeMethods.isBreadCrumbCorrect());
 	}
 	
-	@Test
+	@Ignore
 	public void clickAboutUs(){
 		assertTrue(homeMethods.canClickAboutUs());
 	}
 
-	@Test
+	@Ignore
 	public void hoverTwitter() {
 		assertTrue(homeMethods.checkTwitToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void hoverFacebook() {
 		assertTrue(homeMethods.checkFbToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void hoverGooglePlus() {
 		assertTrue(homeMethods.checkGplusToolTipTitle());
 	}
 
-	@Test
+	@Ignore
 	public void clickToolTip() {
 		assertTrue(homeMethods.canClickTooltip());
 	}
 
-	@Test
+	@Ignore
 	public void clickToolsQa() {
 		assertTrue(homeMethods.canClickToolsQaLink());
 	}
 
-	@Test
+	@Ignore
 	public void clickTabs() {
 		assertTrue(homeMethods.canClickTabs());
 	}
 
-	@Test
+	@Ignore
 	public void clickSlider() {
 		assertTrue(homeMethods.canClickSlider());
 	}
 
-	@Test
+	@Ignore
 	public void clickServices() {
 		assertTrue(homeMethods.canClickServices());
 	}
 
-	@Test
+	@Ignore
 	public void clickSelectable() {
 		assertTrue(homeMethods.canClickSelectable());
 	}
 
-	@Test
+	@Ignore
 	public void clickResizeable() {
 		assertTrue(homeMethods.canClickResizeable());
 	}
 
-	@Test
+	@Ignore
 	public void clickResgistration() {
 		assertTrue(homeMethods.canClickRegistration());
 	}
 
-	@Test
+	@Ignore
 	public void clickPoweredLink() {
 		assertTrue(homeMethods.canClickPoweredLink());
 	}
 
-	@Test
+	@Ignore
 	public void clickMenu() {
 		assertTrue(homeMethods.canClickMenu());
 	}
 
-	@Test
+	@Ignore
 	public void clickHomeIcon() {
 		assertTrue(homeMethods.canClickHomeIcon());
 	}
 
-	@Test
+	@Ignore
 	public void clickFrames() {
 		assertTrue(homeMethods.canClickFramesAndWindows());
 	}
 
-	@Test
+	@Ignore
 	public void clickDroppable() {
 		assertTrue(homeMethods.canClickDroppable());
 	}
 
-	@Test
+	@Ignore
 	public void clickDraggable() {
 		assertTrue(homeMethods.canClickDraggable());
 	}
 
-	@Test
+	@Ignore
 	public void clickDemo() {
 		assertTrue(homeMethods.isDemoDropDownShown());
 	}
 
-	@Test
+	@Ignore
 	public void clickDatePicker() {
 		assertTrue(homeMethods.canClickDatePicker());
 	}
 
-	@Test
+	@Ignore
 	public void clickContact() {
 		assertTrue(homeMethods.canClickContact());
 	}
 
-	@Test
+	@Ignore
 	public void clickBlog() {
 		assertTrue(homeMethods.canClickBlog());
 	}
 
-	@Test
+	@Ignore
 	public void clickAutoComplete() {
 		assertTrue(homeMethods.canClickAutoComplete());
 	}
 
-	@Test
+	@Ignore
 	public void clickAccordion() {
 		assertTrue(homeMethods.canClickAccordion());
 	}
