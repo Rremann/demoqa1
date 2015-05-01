@@ -27,7 +27,6 @@ public class HomeTestExplorerTest {
 	public void setData() throws MalformedURLException{
 
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setPlatform(Platform.WIN8_1);
 		cap.setBrowserName(BrowserType.IE);
 		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),	cap);
 		homeMethods = new HomeMethods(new Home(driver));

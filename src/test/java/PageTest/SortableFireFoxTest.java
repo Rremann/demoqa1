@@ -27,7 +27,6 @@ public class SortableFireFoxTest {
 	public void setData()throws MalformedURLException {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setPlatform(Platform.WIN8_1);
 		cap.setBrowserName(BrowserType.FIREFOX);
 		driver = new RemoteWebDriver(new URL("http://172.16.7.38:4444/wd/hub"),cap);
 		sortMethods = new SortableMethods(new Sortable(driver));
