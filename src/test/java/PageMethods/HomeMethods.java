@@ -6,8 +6,7 @@ import PageObjects.Home;
 
 public class HomeMethods {
 
-	private static final String PICURL = "http://http://demoqa.com/wp-content/uploads/2014/08/pattern-14.png";
-	
+	private static final String PICURL = "http://demoqa.com/wp-content/uploads/2014/08/pattern-14.png";
 	private Home home;
 	
 	
@@ -30,7 +29,7 @@ public class HomeMethods {
 	 * under the customer support section.
 	 */
 	public boolean canClickCustomerPic(){
-		home.waitForTimeout();
+		//home.waitForTimeout();
 		home.clickCustomerPic();
 		return home.getUrl().equals(PICURL);
 	}
